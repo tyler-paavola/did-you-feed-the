@@ -1,0 +1,11 @@
+export class Pet {
+    public type: string; // dog, cat, bird, etc.
+    public name: string;
+    public fed: boolean;
+
+    constructor(type: string, name: string) {
+        this.type = type;
+        this.name = name;
+        this.fed = false;
+    }
+}

@@ -3,22 +3,22 @@ import { NgModule } from '@angular/core';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { OwnerListComponent } from './owner-list/owner-list.component';
-import { OwnerComponent } from './owner-list/owner/owner.component';
-import { PetListComponent } from './pet-list/pet-list.component';
-import { PetEditComponent } from './pet-list/pet-edit/pet-edit.component';
+import { OwnerListComponent } from './owners/owner-list/owner-list.component';
+import { PetListComponent } from './pets/pet-list/pet-list.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { OwnersComponent } from './owners/owners.component';
+import { PetsComponent } from './pets/pets.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OwnerListComponent,
-    OwnerComponent,
     PetListComponent,
-    PetEditComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    OwnersComponent,
+    PetsComponent
   ],
   imports: [
     BrowserModule,
