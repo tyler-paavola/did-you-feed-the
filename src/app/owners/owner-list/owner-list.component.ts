@@ -16,7 +16,8 @@ import {
 export class OwnerListComponent implements OnInit {
 
   owners: Owner[] = [
-    new Owner("Tyler", "tylerpaavola@gmail.com")
+    new Owner("John", "john@gmail.com"),
+    new Owner("Jane", "jane@gmail.com"),
   ];
 
   constructor() {}
