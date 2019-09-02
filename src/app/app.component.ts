@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'did-you-feed-the';
+  ownerElements = [{name: 'John', email: 'john@example.com'}];
 }
