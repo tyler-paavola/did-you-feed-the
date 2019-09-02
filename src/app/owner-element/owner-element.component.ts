@@ -10,7 +10,7 @@ import {
   styleUrls: ['./owner-element.component.css']
 })
 export class OwnerElementComponent implements OnInit {
-  @Input() element: {
+  @Input('owner') element: {
     name: string,
     email: string
   };
