@@ -1,4 +1,9 @@
-<app-header></app-header>
-<p>Owners: <app-owner-element *ngFor="let ownerElement of ownerElements" [owner]="ownerElement"></app-owner-element></p>
-<app-pet-list></app-pet-list>
-<app-footer class="mt-auto"></app-footer>
+<div class="container">
+  <app-header></app-header>
+  <hr>
+  <p>Owners: <app-owner-element *ngFor="let ownerElement of ownerElements" [owner]="ownerElement"> </app-owner-element>
+  </p>
+  <hr>
+  <app-dashboard (ownerCreated)="onOwnerAdded($event)"></app-dashboard>
+  <app-footer class="mt-auto"></app-footer>
+</div>
