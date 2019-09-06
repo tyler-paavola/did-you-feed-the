@@ -14,12 +14,12 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {}
 
   // Emit events
-  @Output() ownerCreated = new EventEmitter < {
+  @Output("newOwner") ownerCreated = new EventEmitter < {
     ownerName: string,
     ownerEmail: string
   } > ();
 
-  @Output() petCreated = new EventEmitter < {
+  @Output("newPet") petCreated = new EventEmitter < {
     petName: string,
     petOwner: string
   } > ();
