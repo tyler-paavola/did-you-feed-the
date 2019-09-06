@@ -5,9 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
   title = 'did-you-feed-the';
-  ownerElements = [{name: 'John', email: 'john@example.com'}];
+  ownerElements = [{name: 'Jane', email: 'jane@example.com'}];
+  petElements = [{name: 'Bosco', owner: 'Jane'}];
 
   ngOnInit() {}
 
@@ -18,7 +20,10 @@ export class AppComponent implements OnInit {
     });
   }
 
-  onPetAdded() {
-
+  onPetAdded(petData: {petName: string, petOwner: string}) {
+    this.petElements.push({
+      name: petData.petName,
+      owner: petData.petOwner
+    });
   }
 }

@@ -9,15 +9,16 @@ import {
   templateUrl: './owner-element.component.html',
   styleUrls: ['./owner-element.component.css']
 })
-export class OwnerElementComponent implements OnInit {
-  @Input('owner') element: {
-    name: string,
-    email: string
-  };
 
+export class OwnerElementComponent implements OnInit {
 
   constructor() {}
 
   ngOnInit() {}
+
+  @Input('owner') element: {
+    name: string,
+    email: string
+  };
 
 }

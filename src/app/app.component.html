@@ -3,7 +3,16 @@
   <hr>
   <p>Owners: <app-owner-element *ngFor="let ownerElement of ownerElements" [owner]="ownerElement"> </app-owner-element>
   </p>
+  <div class="container">
+    <div class="row">
+      <h3>Pets</h3>
+    </div>
+    <div class="row">
+        <app-pet-element *ngFor="let petElement of petElements" [pet]="petElement"></app-pet-element>
+    </div>
+  </div>
   <hr>
-  <app-dashboard (ownerCreated)="onOwnerAdded($event)"></app-dashboard>
+  <app-dashboard (petCreated)="onPetAdded($event)" (ownerCreated)="onOwnerAdded($event)"></app-dashboard>
+  <hr>
   <app-footer class="mt-auto"></app-footer>
 </div>
