@@ -7,11 +7,11 @@
   <div class="col-md-3">
     <h3>New Owner</h3>
     <label>Owner Name</label>
-    <input type="text" class="form-control" [(ngModel)]="newOwnerName">
+    <input type="text" class="form-control" #ownerNameInput>
     <label>Owner Email</label>
-    <input type="email" class="form-control" [(ngModel)]="newOwnerEmail">
+    <input type="email" class="form-control" #ownerEmailInput>
     <br />
-    <button class="btn btn-primary" (click)="onCreateOwner()">Add owner</button>
+    <button class="btn btn-primary" (click)="onCreateOwner(ownerNameInput, ownerEmailInput)">Add owner</button>
   </div>
   <div class="col-md-3">
     <h3>New Pet</h3>

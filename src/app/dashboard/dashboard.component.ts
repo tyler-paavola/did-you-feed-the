@@ -2,7 +2,9 @@ import {
   Component,
   OnInit,
   EventEmitter,
-  Output
+  Output,
+  ViewChild,
+  ElementRef
 } from '@angular/core';
 
 @Component({
@@ -25,22 +27,27 @@ export class DashboardComponent implements OnInit {
   } > ();
 
   // New owner properties
-  newOwnerName = '';
+  @ViewChild('ownerEmailInput', {static: true}) ownerEmailInput: ElementRef;
   newOwnerEmail = '';
 
   // New pet properties
   newPetName = '';
   newPetOwner = '';
 
-  onCreateOwner() {
-    this.ownerCreated.emit({ownerName: this.newOwnerName, ownerEmail: this.newOwnerEmail});
+  constructor() {}
+
+  onCreateOwner(nameInput: HTMLInputElement, emailInput: HTMLInputElement) {
+    this.ownerCreated.emit({
+      ownerName: nameInput.value,
+      ownerEmail: this.ownerEmailInput.nativeElement.value
+    });
   }
 
   onCreatePet() {
     this.petCreated.emit({petName: this.newPetName, petOwner: this.newPetOwner});
   }
   
-  constructor() {}
+
 
   
 
