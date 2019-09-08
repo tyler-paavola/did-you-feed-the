@@ -8,7 +8,12 @@
       <h3>Pets</h3>
     </div>
     <div class="row">
-        <app-pet-element *ngFor="let petElement of petElements" [pet]="petElement"></app-pet-element>
+        <app-pet-element *ngFor="let petElement of petElements" [pet]="petElement">
+          <h5 class="card-title">{{petElement.name}}</h5>
+          <p class="card-text">Owner: {{petElement.owner}}
+          </p>
+          <a href="#" class="btn btn-success">Feed</a>
+        </app-pet-element>
     </div>
   </div>
   <hr>
