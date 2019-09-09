@@ -12,7 +12,8 @@
     </div>
     <div class="row">
       <app-pet-element *ngFor="let petElement of petElements" [name]="petElement.name">
-        <p class="card-text">Owner: {{petElement.owner}}
+        <p #contentParagraph class="card-text">
+          Owner: {{ petElement.owner }}
         </p>
         <a href="#" class="btn btn-success">Feed</a>
       </app-pet-element>
