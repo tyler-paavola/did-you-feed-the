@@ -26,4 +26,8 @@ export class AppComponent implements OnInit {
       owner: petData.petOwner
     });
   }
+
+  onChangeFirst() {
+    this.petElements[0].name = "Changed!";
+  }
 }

@@ -1,6 +1,8 @@
 <div class="container">
   <app-header></app-header>
   <hr>
+  <button class="btn btn-primary" (click)="onChangeFirst()">Change first element</button>
+  <hr>
   <p>Owners: <app-owner-element *ngFor="let ownerElement of ownerElements" [owner]="ownerElement"> </app-owner-element>
   </p>
   <div class="container">
@@ -8,12 +10,11 @@
       <h3>Pets</h3>
     </div>
     <div class="row">
-        <app-pet-element *ngFor="let petElement of petElements" [pet]="petElement">
-          <h5 class="card-title">{{petElement.name}}</h5>
-          <p class="card-text">Owner: {{petElement.owner}}
-          </p>
-          <a href="#" class="btn btn-success">Feed</a>
-        </app-pet-element>
+      <app-pet-element *ngFor="let petElement of petElements" [name]="petElement.name">
+        <p class="card-text">Owner: {{petElement.owner}}
+        </p>
+        <a href="#" class="btn btn-success">Feed</a>
+      </app-pet-element>
     </div>
   </div>
   <hr>
