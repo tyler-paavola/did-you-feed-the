@@ -30,4 +30,8 @@ export class AppComponent implements OnInit {
   onChangeFirst() {
     this.petElements[0].name = "Changed!";
   }
+
+  onDestroyFirst() {
+    this.petElements.splice(0, 1);
+  }
 }
