@@ -29,6 +29,8 @@ Click the *Feed* button on pet
 
 ### Add diet
 ### Edit diet
+### Remove diet
 ### Add medicine
+### Remove medicine
 ### Administer medicine
 ### Walk a pet
