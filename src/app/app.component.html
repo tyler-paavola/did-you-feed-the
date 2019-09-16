@@ -1,12 +1,19 @@
 <div class="container">
-  <app-header></app-header>
+  <app-header (featureSelected)="onNavigate($event)"></app-header>
   <hr>
   <button class="btn btn-primary" (click)="onChangeFirst()">Change first element</button>
   <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy first element</button>
   <hr>
-  <p>Owners: <app-owner-element *ngFor="let ownerElement of ownerElements" [owner]="ownerElement"> </app-owner-element>
-  </p>
-  <div class="container">
+  <div class="container" *ngIf="loadedFeature === 'owner'">
+    <div class="row">
+      <div class="col">
+        <p>Owners: <app-owner-element *ngFor="let ownerElement of ownerElements" [owner]="ownerElement"> </app-owner-element>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="loadedFeature === 'pet'">
     <div class="row">
       <h3>Pets</h3>
     </div>

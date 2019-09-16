@@ -34,4 +34,9 @@ export class AppComponent implements OnInit {
   onDestroyFirst() {
     this.petElements.splice(0, 1);
   }
+
+  loadedFeature = "pet";
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }
